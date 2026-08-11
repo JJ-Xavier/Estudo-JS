@@ -13,4 +13,4 @@ document.write(' O valor Atual é '+valor);
 
 for (cont=1; cont<=valor; cont++){
     document.write(' <br> o valor atual é '+cont);
-}
+}ascascasc
