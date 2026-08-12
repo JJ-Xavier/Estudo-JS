@@ -1,4 +1,7 @@
 var valor; 
+
+var cont; 
+
 valor=prompt('Digite um valor e Tecle enter');
 
 
@@ -12,5 +15,9 @@ document.write(' O valor Atual é '+valor);
 ------------------------------------------------------------- */
 
 for (cont=1; cont<=valor; cont++){
-    document.write(' <br> o valor atual é '+cont);
-}ascascasc
+    if(cont % 2 == 0){
+        document.write(' <br><p style = color:green>Valor atual é par '+cont);
+    } else {
+        document.write(' <br><p style = color:red> O valor atual é impar '+cont);
+    }
+}
