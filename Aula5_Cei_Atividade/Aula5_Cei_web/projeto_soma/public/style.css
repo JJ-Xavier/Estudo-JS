@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 32px 16px; font-family: Arial, sans-serif; background: #f1f5f9; color: #1e293b; }
+.container { max-width: 620px; margin: 0 auto; padding: 28px; background: #fff; border-radius: 12px; box-shadow: 0 4px 18px #0f172a12; }
+h1 { margin-top: 0; color: #1d4ed8; }
+p { line-height: 1.5; }
+#camposSalarios { display: grid; gap: 14px; margin: 24px 0; }
+label { display: grid; gap: 7px; font-weight: 600; }
+input { width: 100%; padding: 11px 12px; border: 1px solid #cbd5e1; border-radius: 7px; font-size: 16px; }
+input:focus { outline: 2px solid #93c5fd; border-color: #2563eb; }
+.acoes { display: flex; gap: 10px; flex-wrap: wrap; }
+button, .botao { display: inline-block; padding: 11px 16px; border: 0; border-radius: 7px; background: #2563eb; color: white; font-size: 15px; text-decoration: none; cursor: pointer; }
+button:hover, .botao:hover { background: #1d4ed8; }
+button.secundario { background: #e2e8f0; color: #1e293b; }
+button.secundario:hover { background: #cbd5e1; }
+.resultado { padding: 18px; margin: 20px 0; background: #eff6ff; border-radius: 8px; }
+.resultado p { margin: 0 0 8px; }
+.resultado strong { color: #1d4ed8; font-size: 28px; }
+li { padding: 5px 0; }
+@media (max-width: 480px) { .container { padding: 20px; } .acoes { flex-direction: column; } button { width: 100%; } }

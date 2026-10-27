@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de salários</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Consulta de salários</h1>
+    <p>Informe os salários e clique em “Mostrar resultado”.</p>
+    <form action="/salarios" method="GET" id="formSalarios">
+      <div id="camposSalarios">
+        <label>Salário 1 (R$)<input type="number" name="salario" min="0" step="0.01" placeholder="Ex.: 2500,00" required></label>
+        <label>Salário 2 (R$)<input type="number" name="salario" min="0" step="0.01" placeholder="Ex.: 1800,00" required></label>
+      </div>
+      <div class="acoes">
+        <button type="button" class="secundario" id="adicionar">+ Adicionar salário</button>
+        <button type="submit">Mostrar resultado</button>
+      </div>
+    </form>
+  </main>
+  <script>
+    const campos = document.getElementById('camposSalarios');
+    document.getElementById('adicionar').addEventListener('click', () => {
+      const numero = campos.querySelectorAll('input').length + 1;
+      const label = document.createElement('label');
+      label.textContent = `Salário ${numero} (R$)`;
+      const input = document.createElement('input');
+      input.type = 'number'; input.name = 'salario'; input.min = '0'; input.step = '0.01';
+      input.placeholder = 'Ex.: 2500,00'; input.required = true;
+      label.appendChild(input); campos.appendChild(label); input.focus();
+    });
+  </script>
+</body>
+</html>
